@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nkc-91-j8z">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="jba-Nu-ydZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nkc-91-j8z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Udh-aS-Dc7">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TFb-xM-Lsq" kind="relationship" relationship="rootViewController" id="tCY-Dw-0KT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WAC-hZ-3Fm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280.80000000000001" y="-564.46776611694156"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="NpS-vc-4DB">
+            <objects>
+                <viewController id="TFb-xM-Lsq" customClass="ViewController" customModule="WebViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mxt-Lf-pBw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QOL-m0-oKo">
+                                <rect key="frame" x="16" y="141" width="343" height="506"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="nWe-lO-VgR">
+                                <rect key="frame" x="16" y="103" width="312" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9e-fu-7oT">
+                                <rect key="frame" x="329" y="102" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="BtM-a2-QA7"/>
+                                </constraints>
+                                <state key="normal" title="Go"/>
+                                <connections>
+                                    <action selector="go:" destination="TFb-xM-Lsq" eventType="touchUpInside" id="4JT-gr-XhR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xyy-jg-gXW">
+                                <rect key="frame" x="16" y="65" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="back:" destination="TFb-xM-Lsq" eventType="touchUpInside" id="d56-3w-M9D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8K-4e-QKl">
+                                <rect key="frame" x="84" y="65" width="56" height="30"/>
+                                <state key="normal" title="Forward"/>
+                                <connections>
+                                    <action selector="forward:" destination="TFb-xM-Lsq" eventType="touchUpInside" id="W20-ZN-vsE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXG-c8-EXN">
+                                <rect key="frame" x="174" y="65" width="47" height="30"/>
+                                <state key="normal" title="Reload"/>
+                                <connections>
+                                    <action selector="reload:" destination="TFb-xM-Lsq" eventType="touchUpInside" id="8vG-Aq-26p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SqW-QC-gEK">
+                                <rect key="frame" x="291" y="65" width="37" height="30"/>
+                                <state key="normal" title="Local"/>
+                                <connections>
+                                    <action selector="local:" destination="TFb-xM-Lsq" eventType="touchUpInside" id="RIa-1o-Hla"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DmO-Vo-lbS">
+                                <rect key="frame" x="16" y="655" width="343" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nWe-lO-VgR" firstAttribute="leading" secondItem="QOL-m0-oKo" secondAttribute="leading" id="2TQ-MK-g2d"/>
+                            <constraint firstItem="DmO-Vo-lbS" firstAttribute="trailing" secondItem="QOL-m0-oKo" secondAttribute="trailing" id="8zU-eA-rmc"/>
+                            <constraint firstItem="Xyy-jg-gXW" firstAttribute="top" secondItem="SgL-Sd-ZfW" secondAttribute="top" constant="1" id="98H-eu-GKM"/>
+                            <constraint firstItem="DmO-Vo-lbS" firstAttribute="leading" secondItem="QOL-m0-oKo" secondAttribute="leading" id="B0S-0o-LHn"/>
+                            <constraint firstItem="Xyy-jg-gXW" firstAttribute="leading" secondItem="mxt-Lf-pBw" secondAttribute="leadingMargin" id="Cou-HK-hCA"/>
+                            <constraint firstItem="SqW-QC-gEK" firstAttribute="trailing" secondItem="nWe-lO-VgR" secondAttribute="trailing" id="Ee0-1W-r88"/>
+                            <constraint firstItem="Y9e-fu-7oT" firstAttribute="trailing" secondItem="mxt-Lf-pBw" secondAttribute="trailingMargin" id="I6f-kk-9vF"/>
+                            <constraint firstItem="Y9e-fu-7oT" firstAttribute="leading" secondItem="nWe-lO-VgR" secondAttribute="trailing" constant="1" id="Ilm-un-q4q"/>
+                            <constraint firstItem="T8K-4e-QKl" firstAttribute="baseline" secondItem="kXG-c8-EXN" secondAttribute="baseline" id="Ojw-w3-1HX"/>
+                            <constraint firstItem="Y9e-fu-7oT" firstAttribute="trailing" secondItem="QOL-m0-oKo" secondAttribute="trailing" id="PbK-xv-HNT"/>
+                            <constraint firstItem="nWe-lO-VgR" firstAttribute="top" secondItem="Xyy-jg-gXW" secondAttribute="bottom" constant="8" symbolic="YES" id="Tqz-qf-pfY"/>
+                            <constraint firstItem="kXG-c8-EXN" firstAttribute="leading" secondItem="T8K-4e-QKl" secondAttribute="trailing" constant="34" id="alW-fi-g0N"/>
+                            <constraint firstAttribute="bottom" secondItem="QOL-m0-oKo" secondAttribute="bottom" constant="20" symbolic="YES" id="iBh-nX-4Er"/>
+                            <constraint firstItem="Xyy-jg-gXW" firstAttribute="baseline" secondItem="T8K-4e-QKl" secondAttribute="baseline" id="iYx-b7-xyu"/>
+                            <constraint firstItem="nWe-lO-VgR" firstAttribute="baseline" secondItem="Y9e-fu-7oT" secondAttribute="baseline" id="jgC-Ko-iU8"/>
+                            <constraint firstItem="DmO-Vo-lbS" firstAttribute="top" secondItem="QOL-m0-oKo" secondAttribute="bottom" constant="8" symbolic="YES" id="jgC-b9-fHD"/>
+                            <constraint firstItem="T8K-4e-QKl" firstAttribute="leading" secondItem="Xyy-jg-gXW" secondAttribute="trailing" constant="34" id="ovB-JU-kuu"/>
+                            <constraint firstItem="Xyy-jg-gXW" firstAttribute="leading" secondItem="nWe-lO-VgR" secondAttribute="leading" id="pna-qZ-daT"/>
+                            <constraint firstItem="SqW-QC-gEK" firstAttribute="baseline" secondItem="kXG-c8-EXN" secondAttribute="baseline" id="q1L-wa-sHC"/>
+                            <constraint firstItem="QOL-m0-oKo" firstAttribute="top" secondItem="nWe-lO-VgR" secondAttribute="bottom" constant="8" symbolic="YES" id="upS-cA-6M8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SgL-Sd-ZfW"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xcO-8S-kaQ"/>
+                    <connections>
+                        <outlet property="progressView" destination="DmO-Vo-lbS" id="We7-gW-R4P"/>
+                        <outlet property="tfUrl" destination="nWe-lO-VgR" id="kfg-lZ-IKc"/>
+                        <outlet property="webView" destination="QOL-m0-oKo" id="ydU-D9-uPs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bev-dp-dCy" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1015" y="-564"/>
+        </scene>
+    </scenes>
+</document>
